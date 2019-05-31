@@ -15,6 +15,7 @@ notifications:
     on_failure: never
   email:
     recipients:
-      - your_email@nyu.edu
+      - gl1776@nyu.edu
+      - ayg250@nyu.edu
     on_success: always
     on_failure: always  
