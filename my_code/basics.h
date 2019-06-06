@@ -6,8 +6,9 @@ struct coord {
     int y = 0;
 };
 
-void print_vector(std::vector<int> v);
+void print_vector(const std::vector<int>& v);
 void print_coords(coord pos);
+void fill_vector(std::vector<int>& v, int n);
 int square(int n);
 int my_abs(int n);
 int sum(int n);
