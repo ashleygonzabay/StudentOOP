@@ -10,8 +10,8 @@ $(TEST_DIR)/test_basics: $(STUDENT_DIR)/basics.cpp $(TEST_DIR)/test_basics.cpp
 
 
 tests: test_basics
-        tests/test_basics
+		tests/test_basics
 
 prod: tests
-        - git commit -a -m "new assignment done"
-        git push origin master
+		- git commit -a -m "new assignment done"
+		git push origin master
