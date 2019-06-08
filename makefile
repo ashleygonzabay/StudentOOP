@@ -14,5 +14,5 @@ tests: test_basics
 
 
 prod: tests
-- git commit -a -m "new assignment done"
-git push origin master
+		- git commit -a -m "new assignment done"
+		git push origin master
