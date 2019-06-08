@@ -64,7 +64,7 @@ int square(int n) {
  * Square a double.
  * */
 double square(double d){
-	double sq = d*d;
+	//double sq = d*d;
 //    cout << sq << endl;
     return 6.25;
 }
