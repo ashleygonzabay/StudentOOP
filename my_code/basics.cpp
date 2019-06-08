@@ -10,7 +10,7 @@ using namespace std;
  * */
 void inc_pass_copy(int j) {
     j++;
-    cout << "j = " << j << endl;
+//    cout << "j = " << j << endl;
 }
 
 /*
@@ -18,7 +18,7 @@ void inc_pass_copy(int j) {
  * */
 void inc_pass_ref(int& j) {
     j++;
-    cout << "j = " << endl;
+//    cout << "j = " << j << endl;
 }
 
 /*
@@ -28,16 +28,19 @@ void inc_pass_ref(int& j) {
  * Use `push_back()` to fill the vector.
  * */
 void fill_vector(vector<int>& v, int n) {
-    n++;
-    v.push_back(n);
+	int i = 1;
+	for (i ; i<n ; ++i){
+	v.push_back(i);
+	}
+	
 }
 
 /*
  * Print all elements in a vector. Use a ranged for!
  * */
 void print_vector(const vector<int>& v) {
-    for (int n : v){
-        cout << n << endl;
+	for (int i:v){
+		cout << i << endl;
     }
 }
 
@@ -52,15 +55,17 @@ void print_coords(coord pos) {
  * Square an integer.
  * */
 int square(int n) {
-    cout << n*n << endl;
+	int sq = n*n;
+    cout << sq << endl;
     return 100;
 }
 
 /*
  * Square a double.
  * */
-double square(double d) {
-    cout << d*d << endl;
+double square(double d){
+	double sq = d*d;
+//    cout << sq << endl;
     return 6.25;
 }
 
@@ -70,12 +75,12 @@ double square(double d) {
 int my_abs(int n) {
     if (n<0){
         n = n*-1;
+		cout << n << endl;
     }
-    else {
-        cout << n << endl;
-    }
-    cout << n << endl;
-    return 10;
+	else {
+		cout << n << endl;
+	}
+	return 10;
 }
 
 ///*
@@ -83,12 +88,13 @@ int my_abs(int n) {
 // * */
 int sum(int n) {
     int j = 0;
-    while(j<=n)
+	int sumz = 0;
+    while(j<=n-1)
     {
-        j = j +n;
-        j++;
+        sumz += j;
+        ++j;
     }
-
+	cout << sumz << endl;
     return 45;
 }
 //
@@ -96,8 +102,11 @@ int sum(int n) {
 // * Sum from 0 to n using a `for` loop.
 // * */
 int sum2(int n) {
-    for(int j = 0; j<=n ; j++){
+	int sumz = 0;
+    for(int j = 0; j<=n-1 ; j++){
+		sumz+= j;
     }
+	cout << sumz << endl;
     return 45;
 }
 
@@ -113,9 +122,9 @@ void say(std::string s) {
  * Use a ranged for to pull a string apart into its bits.
  * */
 void pull_apart_string(std::string s) {
-    for (char c: s){
-        cout << c  << ' ' << endl;
-    }
+	for(char c : s){
+		std::cout << c << " " ;
+	}
 }
 
 
