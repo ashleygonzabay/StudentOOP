@@ -63,7 +63,7 @@ void double_all_things(Thing** things, int n) {
 
 /*
  * Delete all of the things, and the Thing array, that you have created.
- * */
+ **/
 void delete_all_things(Thing** things, int n) {
 	for (int i = 0; i < n; i++){
 		delete things[i];
