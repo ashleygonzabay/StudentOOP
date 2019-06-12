@@ -9,8 +9,14 @@ test_basics: $(TEST_DIR)/test_basics
 
 $(TEST_DIR)/test_basics: $(STUDENT_DIR)/basics.cpp $(TEST_DIR)/test_basics.cpp
 
-tests: test_basics
+test_pointers: $(TEST_DIR)/test_pointers
+
+$(TEST_DIR)/test_pointers: $(STUDENT_DIR)/pointers.cpp $(TEST_DIR)/test_pointers.cpp
+
+
+tests: test_basics test_pointers
 		tests/test_basics
+		tests/test_pointers
 
 
 prod: tests

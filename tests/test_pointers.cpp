@@ -1,15 +1,9 @@
-#include <cassert>
-#include "../my_code/pointers.h"
+//
+//  test_pointers.cpp
+//  basics
+//
+//  Created by Ashley Gonzabay on 6/10/19.
+//  Copyright © 2019 Ashley Gonzabay. All rights reserved.
+//
 
-using namespace std;
-
-int main() {
-    int n = 0;
-    inc_by_value(n);
-    assert(n == 0);
-    inc_with_pointer(&n);
-    assert(n == 1);
-    inc_with_reference(n);
-    assert(n == 2);
-    return 0;
-}
+#include <stdio.h>
