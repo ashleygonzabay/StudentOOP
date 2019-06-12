@@ -13,49 +13,67 @@ using namespace std;
 const double F_TO_C = 5 / 9;
 const double C_TO_F = 9 / 5;
 
-
-Date::Date(int d, int m, int y) {
-	day = d;
-	month = m;
-	year = y;
-}
-//class member should have longer name: width for example
-
 Image::Image(int w, int h, std::string flnm)
-: width(w),height(h)
+	: width(w),height(h)
 {
 	filename = flnm;
 	//this is a buffer and it's p much a temporary placeholder for computer memory.
 	image_buf = new char[image_sz()];
 }
+
 //copy constructor
 Image::Image(const Image& img2){
+	if (&img2 != this){
+		copy_fields(img2);
+	}
+}
+
+//destructor
+Image::~Image(){
+	if (image_buf != nullptr){
+		delete[] image_buf;
+		
+	}
+}
+	
+	Image& Image::operator=(const Image& img2){
+		
+	if (&img2 != this){
+		if (image_buf != nullptr){
+			delete[] image_buf;
+			
+		}
+		copy_fields(img2);
+}
+	return *this;
+}
+
+
+int Image:: image_sz(){
+	return width*height;
+}
+
+void Image::copy_fields(const Image& img2){
 	height = img2.height;
 	width = img2.width;
-	filenm = img2.filenm;
+	filename = img2.filename;
 	image_buf = new char[image_sz()];
 	for (int i = 0; i < image_sz(); i++)
 		image_buf[i] = img2.image_buf[i];
 	
 }
-//destructor
-Image::~Image(){
-	if (image_buf != nullptr) delete image_buf;
+
+
+string Image::display(std::string s){
+	return "Displaying image " + s;
+}
+	
+Date::Date(int d, int m, int y) {
+	day = d;
+	month = m;
+	year = y;
 }
 
-Image::Image& operator=(const Image& img2){
-	if (&img2 != this){
-		if (image_buf != nullptr) delete image_buf
-			return *this;
-		}
-	}
-	
-	
-}
-
-Image::int image_sz(){
-	return width*height;
-}
 
 double WReading::get_tempF() {
 	return (temperature * C_TO_F) + 32;
@@ -73,10 +91,6 @@ string Weather::get_name() const {
 }
 
 
-string Image::display(std::string s){
-	cout << "Displaying Image " << s << endl;
-	
-}
 int Weather::get_rating() const {
     return rating;
     
