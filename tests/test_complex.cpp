@@ -26,11 +26,11 @@ int main() {
 	        cerr << "Bad input format\n";
 	        exit(1);
 	    }
-	//    if(DEBUG)
-	//    {
-	//        cout << "c1 = " << c1 << endl;
-	//    }
-	//
+	    if(DEBUG)
+	    {
+	        cout << "c1 = " << c1 << endl;
+	    }
+	
 	    Complex c2{43.2, 58.9};
 	    assert(c2.get_real() == 43.2);
 	    assert(c2.get_imag() == 58.9);
