@@ -4,12 +4,12 @@ CC=$(CXX)
 STUDENT_DIR=my_code
 TEST_DIR=tests
 
-test_pointers: $(TEST_DIR)/test_pointers
+test_complex: $(TEST_DIR)/test_complex
 
-$(TEST_DIR)/test_pointers: $(STUDENT_DIR)/pointers.cpp $(TEST_DIR)/test_pointers.cpp
+$(TEST_DIR)/test_complex: $(STUDENT_DIR)/complex.cpp $(TEST_DIR)/test_complex.cpp
 
-tests: test_pointers
-		tests/test_pointers
+tests: test_complex
+		tests/test_complex
 
 prod: tests
 		- git commit -a -m "new assignment done"
