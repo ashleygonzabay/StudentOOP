@@ -26,6 +26,13 @@ int main() {
 	assert(lastp->data == 256);
 	cout << "Last: " << lastp << endl;
 	
-	cout << "List: \n";
+	add_at_front(head, 4);
+	assert(head->data == 4);
+	
 	print_list(cout, head);
+	
+	/*
+	 cout << "List: \n";
+	 print_list(cout, head);
+	 */
 }
