@@ -102,3 +102,4 @@ Complex operator+(const Complex& c1, const Complex& c2);
 Complex operator-(const Complex& c1, const Complex& c2);
 
 #endif
+//ended w success

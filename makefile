@@ -5,12 +5,13 @@ STUDENT_DIR=my_code
 TEST_DIR=tests
 
 
-test_weather: $(TEST_DIR)/test_weather
+test_complex: $(TEST_DIR)/test_complex
 
-$(TEST_DIR)/test_weather: $(STUDENT_DIR)/weather.cpp $(TEST_DIR)/test_weather.cpp
+$(TEST_DIR)/test_complex: $(STUDENT_DIR)/complex.cpp $(TEST_DIR)/test_complex.cpp
 
 
-tests:
+tests: test_complex
+		tests/test_complex
 
 prod: tests
 		- git commit -a -m "new assignment done"
