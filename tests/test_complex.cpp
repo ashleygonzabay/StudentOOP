@@ -19,8 +19,8 @@ int main() {
 	//cout << "Input a complex number:\n";
 	Complex c1{12, 13};
 	//get a complex from stdin:
-	cin >> c1;
-	if(!cin)
+//	cin >> c1;
+	if(!c1)
 	{
 		cerr << "Bad input format\n";
 		exit(1);
