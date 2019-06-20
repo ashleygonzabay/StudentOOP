@@ -8,10 +8,6 @@ test_weather: $(TEST_DIR)/test_weather
 
 $(TEST_DIR)/test_weather: $(STUDENT_DIR)/weather.cpp $(TEST_DIR)/test_weather.cpp
 
-test_vector: $(TEST_DIR)/test_vector
-
-$(TEST_DIR)/test_vector: $(STUDENT_DIR)/vector.cpp $(TEST_DIR)/test_vector.cpp
-
 
 tests: test_vector
 		tests/test_vector
