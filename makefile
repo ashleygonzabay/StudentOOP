@@ -9,7 +9,6 @@ test_complex: $(TEST_DIR)/test_complex
 
 $(TEST_DIR)/test_complex: $(STUDENT_DIR)/complex.cpp $(TEST_DIR)/test_complex.cpp
 
-
 tests: test_complex
 		tests/test_complex
 
