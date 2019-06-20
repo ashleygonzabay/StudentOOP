@@ -4,12 +4,17 @@ CC=$(CXX)
 STUDENT_DIR=my_code
 TEST_DIR=tests
 
-test_complex: $(TEST_DIR)/test_complex
+test_weather: $(TEST_DIR)/test_weather
 
-$(TEST_DIR)/test_complex: $(STUDENT_DIR)/complex.cpp $(TEST_DIR)/test_complex.cpp
+$(TEST_DIR)/test_weather: $(STUDENT_DIR)/weather.cpp $(TEST_DIR)/test_weather.cpp
 
-tests: test_complex
-		tests/test_complex
+test_vector: $(TEST_DIR)/test_vector
+
+$(TEST_DIR)/test_vector: $(STUDENT_DIR)/vector.cpp $(TEST_DIR)/test_vector.cpp
+
+
+tests: test_vector
+		tests/test_vector
 
 prod: tests
 		- git commit -a -m "new assignment done"
